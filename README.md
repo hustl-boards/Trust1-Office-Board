@@ -1,10 +1,8 @@
-# DGI Line Card Board
+# Trust 1 Services Office TV
 
-Office television board for **David Gooding, Inc.** — plumbing, heating, and waterworks manufacturers' representative, founded 1980. Motto: **We Care.**
+Office television board for **Trust 1 Services** — heating, cooling, and plumbing in Quincy and Hanover, Massachusetts.
 
-The board features the **New England** line card: a welcome scene, the full logo wall, Heating / Plumbing / Waterworks / Showroom groupings, a spotlight for each line, territory, and contact. Each spotlight adds one short factual sentence about that line. Scenes rotate about every 14 seconds. A clock and Brockton weather sit in the corner. Customer service hours are Monday–Friday, 7AM–5PM.
-
-Logos and product lines come from David Gooding, Inc.'s published line card. Nothing here is a price list, and the board does not advertise after-hours coverage.
+The screen is the Trust 1 mark and a live weather graphic for both towns. Quincy is featured first. The featured town alternates about every 20 seconds, and the other town’s temperature stays visible. Each view shows the current temperature, conditions, feels-like, wind, and humidity, today’s high and low, the next 12 hours, and a five-day forecast. Temperatures are Fahrenheit, wind is miles per hour, and the clock is Eastern time.
 
 ## Run it
 
@@ -14,6 +12,10 @@ Open `index.html` in a browser, or serve the folder:
 python3 -m http.server 8080
 ```
 
-Designed at 1920×1080 and scaled to the screen. No build step. No external fonts or images. Weather is the current temperature and a three-day outlook for Brockton, Massachusetts, from Open-Meteo (no API key). GitHub Pages serves this repository from `main` at the site root.
+Designed at 1920×1080 and scaled to the screen, with type kept inside a margin so it stays clear from 1280×720 through 3840×2160. No build step. No external fonts. Weather comes from [Open-Meteo](https://open-meteo.com/) (no API key). GitHub Pages serves this repository from `main` at the site root:
 
-The page keeps a single timer, does not grow the document while it runs, and reloads itself about every six hours when the browser is online so a TV can stay up. That timer also refreshes weather every 30 minutes. The last good reading stays in local storage, and the widget hides if a fetch fails and there is nothing saved. A watchdog moves to the next scene if one stays up too long. Logos are preloaded once and drop to the DGI mark if a file fails.
+https://hustl-boards.github.io/Trust1-Office-Board/
+
+The page keeps a single timer, does not grow the document while it runs, and reloads itself about every six hours when the browser is online. Weather refreshes about every 12 minutes. If a fetch fails, the last good reading stays on screen and the board tries again. A screen wake lock is requested when the browser supports it.
+
+Add `?demo=rain-night` to preview a weather scene, or `?freeze=1` to hold the featured town still. Gold on the board is `#FDB714`, taken from the logo.

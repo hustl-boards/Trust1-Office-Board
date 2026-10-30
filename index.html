@@ -3,80 +3,115 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="David Gooding, Inc. New England line card for the office television. Plumbing, heating, and waterworks. We Care.">
-  <meta name="theme-color" content="#213C70">
-  <meta name="board-version" content="2">
-  <title>David Gooding, Inc. | New England Line Card</title>
-  <link rel="icon" href="assets/img/dgi-icon.png">
-  <link rel="stylesheet" href="assets/board.css?v=2">
+  <meta name="description" content="Trust 1 Services office television. Heating, cooling, and plumbing in Quincy and Hanover, Massachusetts. Live local weather.">
+  <meta name="theme-color" content="#000000">
+  <meta name="board-version" content="20261030a">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>Trust 1 Services Office TV</title>
+  <link rel="icon" href="assets/trust1-logo.png?v=20261030a">
+  <link rel="stylesheet" href="assets/board.css?v=20261030a">
 </head>
 <body>
+  <h1 class="sr">Trust 1 Services Office TV</h1>
   <div id="viewport">
-    <div id="stage">
-      <header class="topbar">
-        <div class="brand-lockup">
-          <img src="assets/img/dgi-wordmark.png" alt="David Gooding, Inc.">
+    <div id="stage" data-sky="">
+      <div class="sky" aria-hidden="true">
+        <div class="sky-base"></div>
+        <div class="sky-layer" data-layer="clear-day"></div>
+        <div class="sky-layer" data-layer="clear-night"></div>
+        <div class="sky-layer" data-layer="partly-day"></div>
+        <div class="sky-layer" data-layer="partly-night"></div>
+        <div class="sky-layer" data-layer="cloudy-day"></div>
+        <div class="sky-layer" data-layer="cloudy-night"></div>
+        <div class="sky-layer" data-layer="fog-day"></div>
+        <div class="sky-layer" data-layer="fog-night"></div>
+        <div class="sky-layer" data-layer="rain-day"></div>
+        <div class="sky-layer" data-layer="rain-night"></div>
+        <div class="sky-layer" data-layer="snow-day"></div>
+        <div class="sky-layer" data-layer="snow-night"></div>
+        <div class="sky-layer" data-layer="storm-day"></div>
+        <div class="sky-layer" data-layer="storm-night"></div>
+        <div class="stars">
+          <i id="stars-a" class="field stars-a"></i>
+          <i id="stars-b" class="field stars-b"></i>
         </div>
-        <div class="board-heading">
-          <div class="board-title">New England Line Card</div>
-          <div class="board-sub">Plumbing · Heating · Waterworks</div>
+        <div class="sun">
+          <div class="sun-glow"></div>
+          <svg class="sun-rays" viewBox="0 0 200 200">
+            <g fill="none" stroke="#ffe9bf" stroke-linecap="round">
+              <path stroke-width="3" d="M100 8v26M100 166v26M8 100h26M166 100h26"></path>
+              <path stroke-width="2.4" d="M30 30l18 18M152 152l18 18M170 30l-18 18M48 152l-18 18"></path>
+              <path stroke-width="2" opacity="0.75" d="M18 62l22 8M160 130l22 8M18 138l22-8M160 70l22-8"></path>
+            </g>
+          </svg>
+          <div class="sun-core"></div>
         </div>
-        <div class="corner">
-          <div class="weather" id="weather" hidden>
-            <div class="wx-now">
-              <span class="wx-icon" id="wx-icon" data-kind="cloudy" aria-hidden="true">
-                <svg class="kind-clear" viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="4.1" fill="currentColor" stroke="none"></circle>
-                  <path d="M12 1.7v2.5M12 19.8v2.5M1.7 12h2.5M19.8 12h2.5M4.5 4.5l1.8 1.8M17.7 17.7l1.8 1.8M19.5 4.5l-1.8 1.8M6.3 17.7l-1.8 1.8"></path>
-                </svg>
-                <svg class="kind-partly" viewBox="0 0 24 24">
-                  <circle cx="17" cy="6.2" r="2.5" fill="currentColor" stroke="none"></circle>
-                  <path d="M17 1.2v1.5M21.4 3.4l-1.1 1.1M22.2 6.2h-1.6M21 9.2l-1-.9M14.2 3.6l1 .9"></path>
-                  <path fill="currentColor" stroke="none" d="M5.4 19h8.4a2.8 2.8 0 0 0 .3-5.6 4.1 4.1 0 0 0-7.8-1.1 2.7 2.7 0 0 0-.9 6.7z"></path>
-                </svg>
-                <svg class="kind-cloudy" viewBox="0 0 24 24">
-                  <path fill="currentColor" stroke="none" d="M6.2 18.2h10a3.4 3.4 0 0 0 .4-6.8 5 5 0 0 0-9.6-1.2 3.3 3.3 0 0 0-.8 8z"></path>
-                </svg>
-                <svg class="kind-fog" viewBox="0 0 24 24">
-                  <path fill="currentColor" stroke="none" d="M6.4 13.2h9.4a3 3 0 0 0 .3-6 4.4 4.4 0 0 0-8.4-1 2.9 2.9 0 0 0-1.3 7z"></path>
-                  <path d="M4 16.6h16M6 20h12"></path>
-                </svg>
-                <svg class="kind-rain" viewBox="0 0 24 24">
-                  <path fill="currentColor" stroke="none" d="M6.2 14.4h10a3.2 3.2 0 0 0 .3-6.4 4.7 4.7 0 0 0-9-1.2 3.1 3.1 0 0 0-.3 7.6z"></path>
-                  <path d="M8.2 16.6v3.2M12 16.6v4M15.8 16.6v3.2"></path>
-                </svg>
-                <svg class="kind-snow" viewBox="0 0 24 24">
-                  <path fill="currentColor" stroke="none" d="M6.2 14.2h10a3.2 3.2 0 0 0 .3-6.4 4.7 4.7 0 0 0-9-1.2 3.1 3.1 0 0 0-.3 7.6z"></path>
-                  <path d="M8.2 17.2v2.6M8.2 18.5h2.2M15.8 17.2v2.6M13.6 18.5h2.2M12 16.8v3.4M10.6 18.5h2.8"></path>
-                </svg>
-                <svg class="kind-storm" viewBox="0 0 24 24">
-                  <path fill="currentColor" stroke="none" d="M6 13.6h9.6a3.1 3.1 0 0 0 .3-6.2 4.5 4.5 0 0 0-8.6-1.1A3 3 0 0 0 6 13.6z"></path>
-                  <path fill="currentColor" stroke="none" d="M12.4 12.6h-2.2l-.8 3.4h2.1L10.2 20l4.2-5.2h-2.3l.3-2.2z"></path>
-                </svg>
-              </span>
-              <div class="wx-temp" id="wx-temp"></div>
-            </div>
-            <div class="wx-days">
-              <div class="wx-day"><div class="wx-dow"></div><div class="wx-range"></div></div>
-              <div class="wx-day"><div class="wx-dow"></div><div class="wx-range"></div></div>
-              <div class="wx-day"><div class="wx-dow"></div><div class="wx-range"></div></div>
-            </div>
+        <div class="moon"><div class="moon-core"></div></div>
+        <svg class="cloud cloud-a" viewBox="0 0 220 120"><ellipse cx="78" cy="74" rx="46" ry="28" fill="currentColor"></ellipse><ellipse cx="118" cy="58" rx="50" ry="36" fill="currentColor"></ellipse><ellipse cx="162" cy="74" rx="40" ry="26" fill="currentColor"></ellipse><ellipse cx="116" cy="82" rx="78" ry="24" fill="currentColor"></ellipse></svg>
+        <svg class="cloud cloud-b" viewBox="0 0 220 120"><ellipse cx="78" cy="74" rx="46" ry="28" fill="currentColor"></ellipse><ellipse cx="118" cy="58" rx="50" ry="36" fill="currentColor"></ellipse><ellipse cx="162" cy="74" rx="40" ry="26" fill="currentColor"></ellipse><ellipse cx="116" cy="82" rx="78" ry="24" fill="currentColor"></ellipse></svg>
+        <svg class="cloud cloud-c" viewBox="0 0 220 120"><ellipse cx="78" cy="74" rx="46" ry="28" fill="currentColor"></ellipse><ellipse cx="118" cy="58" rx="50" ry="36" fill="currentColor"></ellipse><ellipse cx="162" cy="74" rx="40" ry="26" fill="currentColor"></ellipse><ellipse cx="116" cy="82" rx="78" ry="24" fill="currentColor"></ellipse></svg>
+        <svg class="cloud cloud-d" viewBox="0 0 220 120"><ellipse cx="78" cy="74" rx="46" ry="28" fill="currentColor"></ellipse><ellipse cx="118" cy="58" rx="50" ry="36" fill="currentColor"></ellipse><ellipse cx="162" cy="74" rx="40" ry="26" fill="currentColor"></ellipse><ellipse cx="116" cy="82" rx="78" ry="24" fill="currentColor"></ellipse></svg>
+        <div class="mist"><span></span><span></span><span></span></div>
+        <div class="rain-sheet"></div>
+        <canvas id="precip"></canvas>
+        <div class="snows">
+          <i id="snow-a" class="field snow-a"></i>
+          <i id="snow-b" class="field snow-b"></i>
+          <i id="snow-c" class="field snow-c"></i>
+        </div>
+        <div class="bolt"></div>
+        <div class="vignette"></div>
+      </div>
+      <div class="safe">
+        <header class="top">
+          <div class="brand">
+            <img id="logo" class="logo" src="assets/trust1-logo.svg?v=20261030a" alt="Trust 1 Services">
+            <p class="brand-name">Trust 1 Services</p>
+            <p class="where">Quincy and Hanover, Massachusetts</p>
           </div>
-          <div class="clock" aria-hidden="true">
+          <div class="clock">
             <div class="clock-time" id="clock-time">–:–</div>
             <div class="clock-date" id="clock-date"></div>
           </div>
+        </header>
+        <section class="hero" id="hero">
+          <div class="town-row">
+            <div class="town is-on" id="town-quincy" data-town="quincy">
+              <span class="pip"></span>
+              <span class="name">Quincy</span>
+              <span class="mini" id="mini-quincy"></span>
+            </div>
+            <div class="town" id="town-hanover" data-town="hanover">
+              <span class="pip"></span>
+              <span class="name">Hanover</span>
+              <span class="mini" id="mini-hanover"></span>
+            </div>
+          </div>
+          <div class="temp"><span id="wx-temp">–</span><span class="deg" id="wx-deg" hidden>°</span></div>
+          <div class="condition">
+            <div class="ico ico-lg" id="wx-ico"></div>
+            <div id="wx-cond">–</div>
+          </div>
+          <div class="stats">
+            <div class="stat"><span class="k">Feels like</span><span class="v" id="wx-feels">–</span></div>
+            <div class="stat"><span class="k">Wind</span><span class="v" id="wx-wind">–</span></div>
+            <div class="stat"><span class="k">Humidity</span><span class="v" id="wx-hum">–</span></div>
+            <div class="stat"><span class="k">High / Low</span><span class="v" id="wx-hilo">–</span></div>
+          </div>
+        </section>
+        <div class="strips" id="strips">
+          <div class="strip">
+            <div class="strip-label" id="hourly-label">Next 12 hours</div>
+            <div class="hourly" id="hourly"></div>
+          </div>
+          <div class="strip daily-strip">
+            <div class="strip-label">Five days</div>
+            <div class="daily" id="daily"></div>
+          </div>
         </div>
-      </header>
-      <main class="stage-main" id="stage-main"></main>
-      <footer class="footer">
-        <div class="motto">We Care.</div>
-        <div class="scene-label" id="scene-label"></div>
-        <div class="scene-count" id="scene-count"></div>
-      </footer>
-      <div class="progress" aria-hidden="true"><div id="progress-bar"></div></div>
+      </div>
     </div>
   </div>
-  <script src="assets/board.js?v=2"></script>
+  <script src="assets/board.js?v=20261030a"></script>
 </body>
 </html>
